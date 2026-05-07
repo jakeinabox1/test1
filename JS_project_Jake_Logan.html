@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Countries I have visited</title>
+        <!-- The section above creates the title of the tab -->
+        <style>
+                ul {color: rgb(0, 217, 170);
+                font-family:Arial, Helvetica, sans-serif;
+                font-size: medium;}
+                #desc{font-family: Georgia, 'Times New Roman', Times, serif;}
+                li { margin-bottom: 15px; }
+                h1{width: fit-content;
+                padding: 10px ;
+                height: 50px;
+                background-color: rgb(98, 60, 220);
+                color: aliceblue;
+                }
+                /* Style section is responsible for the appearance of the page  */
+                </style>
+    </head>
+   
+           
+
+        <body>
+            <h1> List of <i>countries</i> I've visited</h1>
+
+            <div id= "desc">
+                <p>Author: <b> Jake Logan </b></p>
+                    <p> The list below mentions countries I've visited, <br>Below each country I will write if I'll visit it again or not and my opinion on it (if I have an opinion).</p>
+
+                    <h3>List of countries:</h3>
+                    <!-- div section is the description of the project, where basic info is written about the array -->
+                </div>
+                
+                <ul id = "countries"></ul>
+                
+               <script>
+                // This is the most crucial part of the code, it creates the array of strings which is created by the function below 
+                // Storing the countries in an array allows to add or remove items later
+
+                let dta = [
+                    "Israel -<br>  Home country",
+
+                    "The United Kingdom -<br>  <b>Yes</b>, I have family over there.",
+                    "Germany -<br>  <b>Yes</b> Nice country, would visit again as I didn't see much of it.",
+                    "France -<br>  <b>No</b>",
+                    "Italy - <br>  <b>Yes</b>, Italy has amazing food and a lot of history.",
+                    "Belgium -<br>  <b>No</b>",
+                    "The Netherlands -<br>  <b>No</b>. Nice country, but i don't think I will visit again as there's not much to do there. ",
+                    "Poland -<br>  <b>Yes</b>, The country is really cheap, I was there on a highschool trip. I don't mind going again.",
+                    "Austria -<br>  Too boring so I'll have to say <b>No</b>.",
+                    "Romania -<br>  <b>No</b>",
+                    "Switzerland -<br>  <b>Yes</b>, although it is extremely expensive",
+                    "Czechia -<br>  <b>Yes</b>. The country is really cheap and nice, I feel like I haven't seen all of it so I would like to visit again  ",
+                    "Canada -<br>  <b>Yes</b>",
+                    "The United States of America -<br> <b>No</b>, the US is too dangerous in my opinion",
+                    "China -<br>  <b>Yes</b>, the history and cuisine really intrigue me  ",
+                    "Hong Kong -<br>  <b>Yes</b>, I would like to see how the current political situation has affected HK as the last time I was there was in 2018.",
+                    "South Korea -<br>  <b>Yes</b>, I haven't explored the whole country and i would like to go there again.",
+                    "Australia -<br>  <b>Yes</b>, of course I will visit again. I worked there for 6 months and I can't wait to go back.",
+                    "Fiji -<br> <b>No</b>, Fiji is a dangerous country and i regret visiting (also extremely expensive)",
+                    "Ethiopia -<br> <b>Yes</b>, I was there at a long connection and I would like to visit more parts of the country."
+
+                ];
+
+                let html = "";
+                dta.forEach(function(element) {
+                // Loops through the data array and builds the html list   
+                    html +=  "<li>" +element + "</li>";
+                });
+                document.getElementById("countries").innerHTML = html;
+               </script> 
+
+                </body>
+                </html>            
+
